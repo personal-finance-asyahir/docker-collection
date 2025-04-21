@@ -1,0 +1,17 @@
+version: '3.9' 
+
+services:
+  postgres_name_above:
+    container_name: postgres_container_name
+    image: postgres:17.4
+    restart: always
+    volumes: 
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: asyahir
+    ports: 
+      - 5432:5432
+
+volumes: 
+    postgres_data:
